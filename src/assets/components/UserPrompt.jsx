@@ -8,8 +8,6 @@ const UserPrompt = ({ question }) => {
                 display: 'flex',
                 fontFamily: 'Nunito',
                 fontWeight: 'bold',
-                width: '325px',
-                height: '33px',
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: '20px',

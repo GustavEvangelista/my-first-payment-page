@@ -2,8 +2,9 @@ import React from 'react'
 import { styled } from '@mui/material/styles'
 import { Box, Typography, Checkbox } from '@mui/material'
 import '@fontsource/nunito'
+import RectangleImg from '../img/Rectangle.png'
 
-const NunitoTypography = styled(Typography)({
+export const NunitoTypography = styled(Typography)({
     fontFamily: 'Nunito',
 });
 
@@ -31,7 +32,7 @@ const Pix = () => {
                 }}
 
             >
-                <NunitoTypography variant="body2" fontWeight="bold" fontFamily={'nunito'}>Pix</NunitoTypography>
+                <NunitoTypography variant="body2" fontWeight="bold">Pix</NunitoTypography>
             </Box>
 
             <Box sx={{
@@ -49,26 +50,23 @@ const Pix = () => {
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '20px',
+                gap: '10px',
                 padding: '0  15px'
             }}>
                 <NunitoTypography
                     color='#03D69D'
                     variant='caption'
-                    fontFamily={'nunito'}
                 >Ganhe 3% de Cashback</NunitoTypography>
-                <Box sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    background: '#133A6F',
-                    marginLeft: '15px',
-                    marginRight: '15px'
-                }}>
+
+                <Box width="100%" position="relative">
+                    <img src={RectangleImg} alt="offer tag" width="100%" />
+
                     <NunitoTypography
                         color='#fff'
                         variant='caption'
-                        fontFamily={'nunito'}
+                        position="absolute"
+                        top={4}
+                        left={6}
                     >🤑 R$ 300,00 de volta no seu Pix na hora</NunitoTypography>
                 </Box>
             </Box>

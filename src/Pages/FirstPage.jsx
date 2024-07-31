@@ -2,6 +2,8 @@ import { Box } from "@mui/material";
 import Logo from "../assets/components/Logo";
 import UserPrompt from "../assets/components/UserPrompt";
 import Pix from "../assets/components/Pix";
+import PixParcelado from "../assets/components/PixParcelado";
+import Footer from "../assets/components/Footer";
 
 const FirstPage = () => {
     return (
@@ -16,6 +18,8 @@ const FirstPage = () => {
             <Logo />
             <UserPrompt question={"João, como você quer pagar?"} />
             <Pix />
+            <PixParcelado />
+            <Footer />
         </Box>
     )
 }

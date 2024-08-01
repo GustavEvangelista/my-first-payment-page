@@ -1,0 +1,26 @@
+import React from 'react';
+import { Box } from '@mui/material'
+import UserPrompt from "../assets/components/UserPrompt";
+import Logo from "../assets/components/Logo";
+import { NunitoTypography } from '../assets/components/Pix';
+import QRcodePage from '../assets/componentsSP/QRcodePage';
+
+const SecondPage = () => {
+    return (
+        <Box sx={{
+            typography: 'Nunito',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '10px',
+            margin: '5px'
+        }}>
+            <Logo />
+            <UserPrompt typography={NunitoTypography} question={"João, pague a entrada de R$ 15.300,00 pelo Pix"} />
+            <QRcodePage />
+        </Box>
+    )
+}
+
+export default SecondPage

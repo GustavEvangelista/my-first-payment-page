@@ -2,7 +2,6 @@ import React from 'react'
 import { NunitoTypography } from './Pix'
 import { Box, Checkbox, Divider } from '@mui/material'
 import RectangleImg from '../img/Rectangle.png'
-import WooviSafe from '../img/WooviSafe.png'
 
 const PixParcelado = () => {
     return (

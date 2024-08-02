@@ -13,7 +13,9 @@ const FirstPage = () => {
             alignItems: 'center',
             gap: '10px',
             padding: '10px',
-            margin: '5px'
+            margin: '5px',
+            maxWidth: "375px",
+            marginX: "auto"
         }}>
             <Logo />
             <UserPrompt question={"João, como você quer pagar?"} />

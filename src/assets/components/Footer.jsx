@@ -6,7 +6,7 @@ import { NunitoTypography } from './Pix'
 const Footer = () => {
     return (
         <Box typography={NunitoTypography}>
-            <img src={FooterSafe} alt="Safe-Tag" />
+            <img src={FooterSafe} alt="Safe-Tag" width={'200px'} />
         </Box>
     )
 }

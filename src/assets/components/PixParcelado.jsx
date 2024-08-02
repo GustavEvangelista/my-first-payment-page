@@ -1,7 +1,9 @@
 import React from 'react'
 import { NunitoTypography } from './Pix'
-import { Box, Checkbox, Divider } from '@mui/material'
+import { Box, Divider, Radio } from '@mui/material'
 import RectangleImg from '../img/Rectangle.png'
+
+
 
 const PixParcelado = () => {
     return (
@@ -36,7 +38,7 @@ const PixParcelado = () => {
             }}
                 paddingTop="15px"
                 paddingLeft="15px"
-            >2x R$15.300,00 <Checkbox />
+            >2x R$15.300,00 <Radio />
             </NunitoTypography>
 
             <NunitoTypography paddingLeft={3} variant='caption'>Total: R$30.600,00</NunitoTypography>
@@ -49,7 +51,7 @@ const PixParcelado = () => {
             }}
                 paddingTop="15px"
                 paddingLeft="15px"
-            >3x R$10.196,66 <Checkbox />
+            >3x R$10.196,66 <Radio />
             </NunitoTypography>
 
             <NunitoTypography paddingLeft={3} variant='caption'>Total: R$30.620,00</NunitoTypography>
@@ -62,7 +64,7 @@ const PixParcelado = () => {
             }}
                 paddingTop="15px"
                 paddingLeft="15px"
-            >4x R$7.725,00 <Checkbox />
+            >4x R$7.725,00 <Radio />
             </NunitoTypography>
 
             <NunitoTypography paddingLeft={3} variant='caption'>Total: R$30.900,00</NunitoTypography>
@@ -93,7 +95,7 @@ const PixParcelado = () => {
             }}
                 paddingTop="15px"
                 paddingLeft="15px"
-            >5x R$6.300,00 <Checkbox />
+            >5x R$6.300,00 <Radio />
             </NunitoTypography>
 
             <NunitoTypography paddingLeft={3} variant='caption'>Total: R$31.500,00</NunitoTypography>
@@ -106,7 +108,7 @@ const PixParcelado = () => {
             }}
                 paddingTop="15px"
                 paddingLeft="15px"
-            >6x R$5.283,33 <Checkbox />
+            >6x R$5.283,33 <Radio />
             </NunitoTypography>
 
             <NunitoTypography paddingLeft={3} variant='caption'>Total: R$31.699,98</NunitoTypography>
@@ -119,7 +121,7 @@ const PixParcelado = () => {
             }}
                 paddingTop="15px"
                 paddingLeft="15px"
-            >7x R$4.542,85 <Checkbox />
+            >7x R$4.542,85 <Radio />
             </NunitoTypography>
 
             <NunitoTypography paddingLeft={3} variant='caption'>Total: R$31.800,00</NunitoTypography>

@@ -21,7 +21,7 @@ export const CustomRadio = styled(Radio)(({ theme }) => ({
 
 
 const icon = <span style={{ borderRadius: '50%', width: 16, height: 16, border: '2px solid #333' }} />;
-const checkedIcon = <CheckIcon style={{ fill: '#fff', background: '#03D69D', borderRadius: '50%', width: 16, height: 16, border: '2px solid #03D69D' }} />; // Ícone de check quando selecionado
+const checkedIcon = <CheckIcon style={{ fill: '#fff', background: '#03D69D', borderRadius: '50%', width: 16, height: 16, border: '2px solid #03D69D' }} />;
 
 const Pix = () => {
     return (

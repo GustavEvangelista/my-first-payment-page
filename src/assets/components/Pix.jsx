@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Typography, Radio } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
@@ -24,10 +24,18 @@ const icon = <span style={{ borderRadius: '50%', width: 16, height: 16, border: 
 const checkedIcon = <CheckIcon style={{ fill: '#fff', background: '#03D69D', borderRadius: '50%', width: 16, height: 16, border: '2px solid #03D69D' }} />;
 
 const Pix = () => {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleRadioClick = () => {
+        setIsChecked((prev) => !prev);
+    };
+
     return (
         <Box sx={{
             position: 'relative',
-            border: '1px solid #000',
+            border: isChecked ? '1px solid #03d69d' : '1px solid #000',
+            background: isChecked ? '#bce3d8' : 'none',
             width: '100%',
             height: '125px',
             borderRadius: '10px',
@@ -59,6 +67,8 @@ const Pix = () => {
                     lineHeight: '2.5'
                 }}>1x R$ 30.500,00</NunitoTypography>
                 <CustomRadio
+                    checked={isChecked}
+                    onClick={handleRadioClick}
                     icon={icon}
                     checkedIcon={checkedIcon}
                 />

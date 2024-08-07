@@ -1,25 +1,40 @@
-import React from 'react'
-import { NunitoTypography } from './Pix'
-import { Box, Divider, Radio } from '@mui/material'
-import RectangleImg from '../img/Rectangle.png'
-import { CustomRadio } from './Pix'
+import React, { useState } from 'react';
+import { NunitoTypography } from './Pix';
+import { Box, Divider } from '@mui/material';
+import RectangleImg from '../img/Rectangle.png';
+import { CustomRadio } from './Pix';
 import CheckIcon from '@mui/icons-material/Check';
+
 
 const icon = <span style={{ borderRadius: '50%', width: 16, height: 16, border: '2px solid #333' }} />;
 const checkedIcon = <CheckIcon style={{ fill: '#fff', background: '#03D69D', borderRadius: '50%', width: 16, height: 16, border: '2px solid #03D69D' }} />;
 
-
 const PixParcelado = () => {
+
+
+    const [selectedOption, setSelectedOption] = useState('');
+
+    // Função para alternar a seleção do rádio
+    const handleRadioClick = (value) => {
+        if (selectedOption === value) {
+            // Se o rádio já estiver selecionado, desmarque-o
+            setSelectedOption('');
+        } else {
+            // Caso contrário, marque o novo rádio
+            setSelectedOption(value);
+        }
+    };
+
     return (
-        <Box sx={{
-            border: "1px solid #333",
-            borderRadius: "10px",
-            margin: "20px"
-        }}
+        <Box
+            sx={{
+                border: selectedOption ? '1px solid #03d69d' : '1px solid #000',
+                borderRadius: '10px',
+                margin: '20px',
+            }}
             position="relative"
             width="100%"
         >
-
             <Box
                 sx={{
                     position: 'absolute',
@@ -31,126 +46,134 @@ const PixParcelado = () => {
                     color: 'black',
                     background: '#aeabab',
                 }}
-
             >
-                <NunitoTypography variant='body2' fontWeight="bold">Pix Parcelado</NunitoTypography>
+                <NunitoTypography variant="body2" fontWeight="bold">
+                    Pix Parcelado
+                </NunitoTypography>
             </Box>
 
-            <NunitoTypography sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-            }}
-                padding="15px"
-                paddingBottom="0"
-            >2x R$15.300,00 <CustomRadio
-                    icon={icon}
-                    checkedIcon={checkedIcon}
-                />
-            </NunitoTypography>
-
-            <NunitoTypography paddingLeft={3} variant='caption'>Total: R$30.600,00</NunitoTypography>
-
-            <Divider />
-
-            <NunitoTypography sx={{
-                display: 'flex',
-                justifyContent: 'space-between'
-            }}
-                padding="15px"
-                paddingBottom="0"
-            >3x R$10.196,66 <CustomRadio
-                    icon={icon}
-                    checkedIcon={checkedIcon}
-                />
-            </NunitoTypography>
-
-            <NunitoTypography paddingLeft={3} variant='caption'>Total: R$30.620,00</NunitoTypography>
-
-            <Divider />
-
-            <NunitoTypography sx={{
-                display: 'flex',
-                justifyContent: 'space-between'
-            }}
-                padding="15px"
-                paddingBottom="0"
-            >4x R$7.725,00 <CustomRadio
-                    icon={icon}
-                    checkedIcon={checkedIcon}
-                />
-            </NunitoTypography>
-
-            <NunitoTypography paddingLeft={3} variant='caption'>Total: R$30.900,00</NunitoTypography>
-
             <Box sx={{
-                position: 'relative',
-                padding: '0 15px',
-                gap: '10px'
+                borderTopRightRadius: '10px',
+                borderTopLeftRadius: '10px',
+                background: selectedOption ? '#bce3d8' : 'none',
+                justifyContent: 'space-between',
+                display: 'flex',
+                padding: '15px',
+                paddingBottom: '0'
             }}>
 
+                <NunitoTypography>2x R$15.300,00</NunitoTypography>
+
+                <CustomRadio
+                    checked={selectedOption === '2x'}
+                    onClick={() => handleRadioClick('2x')}
+                    icon={icon}
+                    checkedIcon={checkedIcon}
+                />
+
+            </Box>
+
+            <NunitoTypography paddingLeft={3} variant="caption">
+                Total: R$30.600,00
+            </NunitoTypography>
+
+
+            <Divider sx={{ border: selectedOption ? '0.1px solid #03d69d' : '0.1px solid rgba(0, 0, 0, 0.12)' }} />
+
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '15px', paddingBottom: '0' }}>
+                <NunitoTypography>3x R$10.196,66</NunitoTypography>
+                <CustomRadio
+                    checked={selectedOption === '3x'}
+                    onClick={() => handleRadioClick('3x')}
+                    icon={icon}
+                    checkedIcon={checkedIcon}
+                />
+            </Box>
+            <NunitoTypography paddingLeft={3} variant="caption">
+                Total: R$30.620,00
+            </NunitoTypography>
+
+            <Divider />
+
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '15px', paddingBottom: '0' }}>
+                <NunitoTypography>4x R$7.725,00</NunitoTypography>
+                <CustomRadio
+                    checked={selectedOption === '4x'}
+                    onClick={() => handleRadioClick('4x')}
+                    icon={icon}
+                    checkedIcon={checkedIcon}
+                />
+            </Box>
+            <NunitoTypography paddingLeft={3} variant="caption">
+                Total: R$30.900,00
+            </NunitoTypography>
+
+            <Box
+                sx={{
+                    position: 'relative',
+                    padding: '0 15px',
+                    gap: '10px',
+                }}
+            >
                 <img src={RectangleImg} alt="offer tag" width="100%" />
 
                 <NunitoTypography
-                    paddingLeft='25px'
-                    color='#fff'
-                    variant='caption'
+                    paddingLeft="25px"
+                    color="#fff"
+                    variant="caption"
                     position="absolute"
                     top={4}
                     left={6}
-                >-3% de juros: Melhor opção de parcelamento</NunitoTypography>
-
+                >
+                    -3% de juros: Melhor opção de parcelamento
+                </NunitoTypography>
             </Box>
             <Divider />
 
-            <NunitoTypography sx={{
-                display: 'flex',
-                justifyContent: 'space-between'
-            }}
-                padding="15px"
-                paddingBottom="0"
-            >5x R$6.300,00 <CustomRadio
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '15px', paddingBottom: '0' }}>
+                <NunitoTypography>5x R$6.300,00</NunitoTypography>
+                <CustomRadio
+                    checked={selectedOption === '5x'}
+                    onClick={() => handleRadioClick('5x')}
                     icon={icon}
                     checkedIcon={checkedIcon}
                 />
+            </Box>
+            <NunitoTypography paddingLeft={3} variant="caption">
+                Total: R$31.500,00
             </NunitoTypography>
-
-            <NunitoTypography paddingLeft={3} variant='caption'>Total: R$31.500,00</NunitoTypography>
 
             <Divider />
 
-            <NunitoTypography sx={{
-                display: 'flex',
-                justifyContent: 'space-between'
-            }}
-                padding="15px"
-                paddingBottom="0"
-            >6x R$5.283,33 <CustomRadio
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '15px', paddingBottom: '0' }}>
+                <NunitoTypography>6x R$5.283,33</NunitoTypography>
+                <CustomRadio
+                    checked={selectedOption === '6x'}
+                    onClick={() => handleRadioClick('6x')}
                     icon={icon}
                     checkedIcon={checkedIcon}
                 />
+            </Box>
+            <NunitoTypography paddingLeft={3} variant="caption">
+                Total: R$31.699,98
             </NunitoTypography>
-
-            <NunitoTypography paddingLeft={3} variant='caption'>Total: R$31.699,98</NunitoTypography>
 
             <Divider />
 
-            <NunitoTypography sx={{
-                display: 'flex',
-                justifyContent: 'space-between'
-            }}
-                padding="15px"
-                paddingBottom="0"
-            >7x R$4.542,85 <CustomRadio
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '15px', paddingBottom: '0' }}>
+                <NunitoTypography>7x R$4.542,85</NunitoTypography>
+                <CustomRadio
+                    checked={selectedOption === '7x'}
+                    onClick={() => handleRadioClick('7x')}
                     icon={icon}
                     checkedIcon={checkedIcon}
                 />
+            </Box>
+            <NunitoTypography paddingLeft={3} variant="caption">
+                Total: R$31.800,00
             </NunitoTypography>
+        </Box>
+    );
+};
 
-            <NunitoTypography paddingLeft={3} variant='caption'>Total: R$31.800,00</NunitoTypography>
-
-        </Box >
-
-    )
-}
-
-export default PixParcelado
+export default PixParcelado;

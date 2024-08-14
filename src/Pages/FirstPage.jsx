@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+
 import { Box } from '@mui/material';
 import Logo from '../assets/components/Logo';
 import UserPrompt from '../assets/components/UserPrompt';
 import Pix from '../assets/components/Pix';
 import PixParcelado from '../assets/components/PixParcelado';
 import Footer from '../assets/components/Footer';
+import { useState } from 'react';
 
 const FirstPage = () => {
     // Estado para controlar qual rádio está selecionado

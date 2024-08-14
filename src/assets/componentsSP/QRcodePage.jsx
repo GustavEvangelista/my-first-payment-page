@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { Box, Button } from '@mui/material'
 import QRCode from 'qrcode.react'
-import React from 'react'
 
 const QRcodePage = ({ height, size = 200 }) => {
 

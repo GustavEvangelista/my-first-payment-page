@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { Box } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import { CustomRadio, NunitoTypography } from './PixStyledComponents'; // Certifique-se de que o caminho está correto

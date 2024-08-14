@@ -1,4 +1,3 @@
-import React from 'react';
 import WooviLogo from '/Logo.svg';
 import { Box } from '@mui/material';
 

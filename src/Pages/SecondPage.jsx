@@ -1,9 +1,8 @@
-import React from 'react';
 import { Box } from '@mui/material'
 import UserPrompt from "../assets/components/UserPrompt";
 import Logo from "../assets/components/Logo";
-import { NunitoTypography } from '../assets/components/Pix';
 import QRcodePage from '../assets/componentsSP/QRcodePage';
+import { NunitoTypography } from '../assets/components/PixStyledComponents';
 
 const SecondPage = () => {
     return (

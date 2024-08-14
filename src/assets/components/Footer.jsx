@@ -1,7 +1,7 @@
 import { Box } from '@mui/system'
-import React from 'react'
 import FooterSafe from '../img/WooviSafe.png'
-import { NunitoTypography } from './Pix'
+import { NunitoTypography } from './PixStyledComponents'
+
 
 const Footer = () => {
     return (

@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { Typography, Radio } from '@mui/material';
+import '@fontsource/nunito';
 
 export const NunitoTypography = styled(Typography)({
     fontFamily: 'Nunito',

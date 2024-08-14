@@ -7,6 +7,7 @@ import PixParcelado from '../assets/components/PixParcelado';
 import Footer from '../assets/components/Footer';
 import { useState } from 'react';
 
+
 const FirstPage = () => {
     // Estado para controlar qual rádio está selecionado
     const [selectedOption, setSelectedOption] = useState('');

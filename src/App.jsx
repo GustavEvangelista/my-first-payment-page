@@ -1,15 +1,12 @@
 /* eslint-disable no-undef */
+import { FirstPage } from '@mui/icons-material'
 import './App.css'
-import FirstPage from './Pages/FirstPage'
-
 
 function App() {
 
   return (
     <>
-
       <FirstPage />
-
     </>
   )
 }

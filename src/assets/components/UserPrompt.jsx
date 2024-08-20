@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
+import { NunitoTypography } from './PixStyledComponents'
 
 
 const UserPrompt = ({ question }) => {
     return (
-        <Box>
-            <Typography sx={{
+        <Box sx={{
+            marginTop: '15px'
+        }}>
+            <NunitoTypography sx={{
                 display: 'flex',
                 fontFamily: 'Nunito',
                 fontWeight: 'bold',
@@ -13,10 +16,11 @@ const UserPrompt = ({ question }) => {
                 alignItems: 'center',
                 height: '20px',
                 width: '100%',
+                textAlign: 'center',
             }}
             >
                 {question}
-            </Typography>
+            </NunitoTypography>
         </Box>
     )
 }

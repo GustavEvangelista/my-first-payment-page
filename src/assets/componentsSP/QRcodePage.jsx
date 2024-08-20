@@ -1,26 +1,30 @@
 /* eslint-disable react/prop-types */
-import { Box, Button } from '@mui/material'
+import { Box } from '@mui/material'
 import QRcodeImg from '../img/QRcode.img.png'
+
 
 const QRcodePage = () => {
 
     return (
         <Box
-            margin={'10px'}
-            flexDirection={'column'}
-            display={'flex'}
+            marginTop={'15px'}
         >
             <Box sx={{
                 border: '2px solid #03D69D',
-                borderRadius: '5px'
+                borderRadius: '5px',
+                alignItems: 'center',
+                width: '220px',
+                height: '220px',
+                display: 'flex',
+                justifyContent: 'center'
             }}>
-                <img src={QRcodeImg} alt="WooviLogo" />
+                <img src={QRcodeImg} alt="QRCodeImg" style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain'
+                }} />
 
             </Box>
-
-            <Button sx={{
-                border: '1px solid #333'
-            }} variant="Contained">Clique para copiar o QRcode</Button>
 
         </Box>
     )

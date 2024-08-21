@@ -6,6 +6,8 @@ import { NunitoTypography } from '../assets/components/PixStyledComponents';
 import Footer from '../assets/components/Footer';
 import QRButton from '../assets/componentsSP/QRButton';
 import PaymentTerm from '../assets/componentsSP/PaymentTerm';
+import ValueBox from '../assets/componentsSP/ValueBox';
+import Idbox from '../assets/componentsSP/Idbox';
 
 const SecondPage = () => {
     return (
@@ -24,6 +26,8 @@ const SecondPage = () => {
             <QRcodePage />
             < QRButton />
             < PaymentTerm />
+            <ValueBox />
+            <Idbox />
             <Footer />
         </Box>
     )

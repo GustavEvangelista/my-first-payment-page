@@ -13,8 +13,8 @@ const QRcodePage = () => {
                 border: '2px solid #03D69D',
                 borderRadius: '5px',
                 alignItems: 'center',
-                width: '220px',
-                height: '220px',
+                width: '320px',
+                height: '320px',
                 display: 'flex',
                 justifyContent: 'center'
             }}>

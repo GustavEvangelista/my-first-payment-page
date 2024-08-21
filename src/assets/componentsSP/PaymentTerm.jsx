@@ -5,10 +5,10 @@ const PaymentTerm = () => {
     return (
         <Box>
             <NunitoTypography style={{
-                fontSize: '8px',
+                fontSize: '10px',
             }}>Prazo de pagamento: </NunitoTypography>
             <NunitoTypography style={{
-                fontSize: '8px',
+                fontSize: '10px',
                 fontWeight: 'bold'
             }}>15/12/2021 - 08:17</NunitoTypography>
         </Box>

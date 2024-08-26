@@ -3,7 +3,7 @@ import { Box, TextField, Grid, MenuItem } from '@mui/material';
 const CreditCardForm = () => {
     return (
         <Box component="form" sx={{ width: '100%' }} noValidate autoComplete="off">
-            <TextField sx={{ borderRadius: '8px' }}
+            <TextField
                 fullWidth
                 label="Nome Completo"
                 variant="outlined"

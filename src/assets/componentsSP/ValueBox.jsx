@@ -20,7 +20,7 @@ const ValueBox = () => {
                     control={<CustomRadio disabled />}
                     label="1° parcela no Pix"
                 />
-                <NunitoTypography fontSize={'15px'} fontWeight={'bold'}>R$15.300,00</NunitoTypography>
+                <NunitoTypography fontSize={'12px'} fontWeight={'bold'}>R$15.300,00</NunitoTypography>
             </Box>
 
             <Box sx={{
@@ -32,7 +32,7 @@ const ValueBox = () => {
                     control={<CustomRadio disabled />}
                     label="2° parcela no Cartão"
                 />
-                <NunitoTypography fontSize={'15px'} fontWeight={'bold'}>R$15.300,00</NunitoTypography>
+                <NunitoTypography fontSize={'12px'} fontWeight={'bold'}>R$15.300,00</NunitoTypography>
             </Box>
 
             <Divider sx={{ marginBottom: '10px' }} />
@@ -43,7 +43,7 @@ const ValueBox = () => {
                 alignItems: 'center',
             }}>
                 <NunitoTypography fontSize={'12px'}>CET: 0,5%</NunitoTypography>
-                <NunitoTypography>R$ 15.300,00</NunitoTypography>
+                <NunitoTypography>R$ 30.600,00</NunitoTypography>
             </Box>
 
             <Divider sx={{ marginTop: '10px', marginBottom: '10px' }} />

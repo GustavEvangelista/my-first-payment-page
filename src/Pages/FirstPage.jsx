@@ -6,16 +6,22 @@ import Pix from '../assets/components/Pix';
 import PixParcelado from '../assets/components/PixParcelado';
 import Footer from '../assets/components/Footer';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const FirstPage = () => {
     // Estado para controlar qual rádio está selecionado
     const [selectedOption, setSelectedOption] = useState('');
+    const navigate = useNavigate();
 
     // Função para alternar a seleção do rádio
     const handleRadioClick = (value) => {
         // Alterna o estado para o valor selecionado, desmarcando qualquer outra seleção
-        setSelectedOption((prevValue) => (prevValue === value ? '' : value));
+        setSelectedOption(value);
+        setTimeout(() => {
+            navigate('/PixPage');
+        }, 2000)
     };
 
     return (

@@ -9,7 +9,10 @@ import PaymentTerm from '../assets/componentsSP/PaymentTerm';
 import ValueBox from '../assets/componentsSP/ValueBox';
 import Idbox from '../assets/componentsSP/Idbox';
 
+
 const SecondPage = () => {
+
+
     return (
         <Box sx={{
             display: 'flex',
